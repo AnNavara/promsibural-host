@@ -553,14 +553,21 @@ p {
 
 p,span {
   font-size: 14px;
+  font-weight: 300;
   line-height: 1.75;
 }
 
-p,span,a {
-  font-weight: 300;
+blockquote {
+  padding: 25px 30px 26px 39px;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.55;
+  color: #0b486b;
+  background-color: #fff;
 }
 
 a {
+  font-weight: 300;
   color: #3b8686;
 }
 a,a:focus,a:hover {
@@ -1425,18 +1432,7 @@ footer {
   color: #0b486b;
 }
 .content blockquote {
-  width: 808px;
-  max-width: 114.9%;
-  padding: 25px 30px 26px 39px;
-  margin-top: 34px;
-  margin-bottom: 44px;
-  font-size: 19px;
-  line-height: 1.55;
-  color: #0b486b;
-}
-.content blockquote,.content .table-wrapper {
-  margin-left: -14.4%;
-  background-color: #fff;
+  margin: 34px 0 44px -14.4%;
 }
 .content .table-wrapper {
   width: 807px;
@@ -1444,6 +1440,8 @@ footer {
   padding: 34px 40px 26px 40px;
   margin-top: 38px;
   margin-bottom: 42px;
+  margin-left: -14.4%;
+  background-color: #fff;
 }
 .content table {
   width: 100%;
@@ -1626,6 +1624,65 @@ footer {
   color: #0b486b;
   letter-spacing: 0.02em;
 }
+
+.about-page {
+  padding-bottom: 115px;
+  margin-top: -25px;
+  font-weight: 300;
+  color: #0b486b;
+  background-color: #f0f3f2;
+}
+.about-page__descr {
+  position: relative;
+  margin-bottom: 56px;
+}
+.about-page__descr::after {
+  position: absolute;
+  top: 9px;
+  right: -105%;
+  width: 475px;
+  height: 274px;
+  content: "";
+  background: url("../img/bg-trade.png") no-repeat center;
+}
+.about-page__quote {
+  padding: 37px 165px 40px 165px;
+  margin-bottom: 85px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.advantage {
+  padding-right: 43px;
+  margin-bottom: 67px; 
+  text-align: center;
+}
+.advantage__title {
+  margin-top: 0;
+  margin-bottom: 19px;
+}
+.advantage p {
+  text-align: left;
+}
+.advantage__img {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 38px;
+  background-color: #cff09e;
+}
+.advantage__img::before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+.advantage__img img {
+  text-align: center;
+  vertical-align: middle;
+}
 @media (min-width: 50em) {
   .container {
     width: 750px;
@@ -1794,7 +1851,7 @@ footer {
     font-size: 34px;
   }
   h3 {
-    margin: 50px 0 13px 0;
+    margin: 50px 0 15px 0;
     font-size: 24px;
   }
   p,span {
