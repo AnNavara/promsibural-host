@@ -637,11 +637,11 @@ a:disabled {
 }
 
 .slider {
-  height: 278px;
+  min-height: 278px;
   border: 16px solid #16567a;
 }
 .slider__item {
-  padding: 38px 84px 36px 47px;
+  padding: 38px 84px 22px 47px;
 }
 .slider__item h1 {
   margin-bottom: 25px;
@@ -664,7 +664,7 @@ a:disabled {
   vertical-align: baseline;
 }
 .block-header span {
-  font-size: 32px;
+  font-size: 29px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -722,15 +722,14 @@ ul li::before {
 }
 .logo--footer span {
   position: relative;
-  top: 20px;
+  top: 21px;
   z-index: 1;
   display: block;
-  height: 40px;
-  padding-left: 19px;
+  height: 36px;
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.2;
   color: #0f5278;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -740,7 +739,7 @@ ul li::before {
   position: absolute;
   content: "";
   top: -2px;
-  left: 8px;
+  left: 3px;
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -748,14 +747,14 @@ ul li::before {
 }
 .logo h1 {
   position: relative;
-  top: 23px;
+  top: 26px;
   z-index: 1;
   display: block;
-  height: 42px;
+  height: 36px;
   margin: 0;
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.2;
   color: #0b486b;
   text-align: left;
   text-transform: uppercase;
@@ -791,8 +790,8 @@ ul li::before {
 }
 .page-nav__item {
   display: inline-block;
-  padding: 16px 33px;
-  font-size: 15px;
+  padding: 16px 1.195em;
+  font-size: 12px;
   font-weight: 300;
   color: #fff;
   text-transform: uppercase;
@@ -830,7 +829,7 @@ ul li::before {
 }
 .contacts__email,.contacts__request-call {
   padding: 0;
-  font-size: 13px;
+  font-size: 12px;
   color: #3b8686;
   background: transparent;
   border: none;
@@ -841,7 +840,6 @@ ul li::before {
 .contacts__icq,.contacts__skype {
   position: relative;
   display: block;
-  padding-left: 67px;
   font-size: 13px;
   line-height: 1.5;
   color: currentColor;
@@ -856,7 +854,7 @@ ul li::before {
   position: absolute;
   content: " ";
   top: 2px;
-  left: 43px;
+  left: -20px;
   width: 14px;
   height: 14px;
   background: url("../img/icon-icq.png") no-repeat 0 0 transparent;
@@ -868,7 +866,7 @@ ul li::before {
   position: absolute;
   content: " ";
   top: 2px;
-  left: 43px;
+  left: -20px;
   width: 15px;
   height: 16px;
   background: url("../img/icon-skype.png") no-repeat 0 0 transparent;
@@ -880,8 +878,8 @@ ul li::before {
 }
 .page-header__phone {
   display: block;
-  padding-left: 40px;
   margin-top: 20px;
+  margin-bottom: 9px;
   font-size: 24px;
   font-weight: 300;
   color: #0b486b;
@@ -891,8 +889,7 @@ ul li::before {
   color: #20658d;
 }
 .page-header__request-call {
-  padding-left: 40px;
-  margin-right: 30px;
+  margin-right: 12px;
 }
 .page-header__call-head {
   position: relative;
@@ -940,8 +937,10 @@ footer {
 .page-footer__call-head {
   position: relative;
   padding: 0;
+  font-weight: 300;
   line-height: 1.4;
   color: #cff09e;
+  text-align: left;
   background-color: transparent;
   border: none;
 }
@@ -970,6 +969,7 @@ footer {
 .page-footer__email,.page-footer__request-call {
   display: block;
   margin-bottom: 8px;
+  font-weight: 300;
   line-height: 1.4;
   color: #cff09e;
 }
@@ -982,6 +982,7 @@ footer {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 8px;
+  font-weight: 300;
   line-height: 1.4;
   color: #fff;
 }
@@ -1011,7 +1012,7 @@ footer {
   position: relative;
   display: block;
   float: left;
-  padding: 10px 49px 10px 27px;
+  padding: 10px 4% 10px 3%;
   margin: 0;
   list-style: none;
 }
@@ -1076,7 +1077,7 @@ footer {
 .service {
   position: relative;
   min-height: 304px;
-  padding: 39px 32px 30px 37px;
+  padding: 28px 13% 30px 13%;
   margin-top: -53px;
   margin-bottom: 82px;
   color: #0b486b;
@@ -1088,8 +1089,7 @@ footer {
 }
 .service__link {
   display: inline-block;
-  width: 50px;
-  margin-right: 40px;
+  margin-bottom: 10px;
   font-size: 14px;
   color: #3b8686;
 }
@@ -1098,6 +1098,7 @@ footer {
   content: "";
   top: 30px;
   right: 40px;
+  display: none;
   width: 50px;
   height: 50px;
   background: url("../img/icon-arrow-up.png") no-repeat center center #f0f3f2;
@@ -1185,9 +1186,9 @@ footer {
 
 .material {
   display: inline-block;
-  width: 360px;
+  width: 29.5%;
   padding-right: 10px;
-  margin-right: 41px;
+  margin-right: 5%;
   margin-bottom: 78px;
   vertical-align: top;
 }
@@ -1205,6 +1206,9 @@ footer {
   letter-spacing: 0.05em;
 }
 .material img {
+  width: 90%;
+  max-width: 261px;
+  max-height: 400px; 
   margin-bottom: 26px;
   background-color: #fff;
 }
@@ -1297,7 +1301,7 @@ footer {
 }
 .tabs__wrapper {
   height: 481px;
-  padding: 63px 84px 63px 53px;
+  padding: 63px 54px 63px 30px;
   background-color: #fff;
 }
 .tabs__menu {
@@ -1340,10 +1344,9 @@ footer {
 .tabs__item {
   position: absolute;
   top: 0;
-  left: 137px;
+  left: 0;
   display: none;
-  width: -webkit-calc(100% - 137px);
-  width:         calc(100% - 137px);
+  width: 100%;
   height: 100%;
   border: 20px solid whitesmoke;
 }
@@ -1399,9 +1402,9 @@ footer {
   background-color: #f0f3f2;
 }
 .sidepage__title {
-  width: 165.5%;
+  width: 112.9%;
   padding-top: 82px;
-  margin-left: -13.9%;
+  margin-left: -9.8%;
 }
 .sidepage__title--alt {
   width: 100%;
@@ -1424,7 +1427,7 @@ footer {
 }
 
 .content {
-  width: 805px;
+  width: 555px;
   max-width: 100%;
   padding-left: 8.7%;
 }
@@ -1468,8 +1471,7 @@ footer {
   float: right;
   width: 360px;
   max-width: 55.5%;
-  margin-right: -37.3%;
-  margin-left: 10.7%;
+  margin: 0 -37.3% 1em 10.7%;
 }
 .content .with-img img {
   display: block;
@@ -1584,7 +1586,7 @@ footer {
   background-image: url("../img/icon-skype.png");
 }
 .contacts-page__meaningful {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.45;
   color: currentColor;
@@ -1693,8 +1695,10 @@ footer {
   top: 9px;
   right: -105%;
   width: 475px;
+  max-width: 100%;
   height: 274px;
   background: url("../img/bg-trade.png") no-repeat center;
+  background-size: contain;
 }
 .about-page__quote {
   padding: 37px 165px 40px 165px;
@@ -1780,9 +1784,6 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.products__item:nth-child(3n-2) {
-  margin-left: 0;
-}
 .products__descr {
   padding: 50px 45px 0;
 }
@@ -1824,7 +1825,7 @@ footer {
   float: right;
 }
 .flowchart__wrapper:nth-child(odd) .flowchart__step::before {
-  left: -14.4%;
+  left: -14%;
 }
 .flowchart__wrapper:nth-child(odd) .flowchart__step::after {
   left: -12.6%;
@@ -1914,9 +1915,20 @@ footer {
   background: url("../img/icon-arrow-up--big.png") no-repeat center #fff; 
   border-radius: 50%;
 }
-@media (min-width: 50em) {
+@media (min-width: 32em) {
+  .sidepage__title {
+    width: 165.5%;
+    padding-top: 82px;
+    margin-left: -13.9%;
+  }
+  .sidepage__title--alt {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 54em) {
   .container {
-    width: 750px;
+    width: 870px;
   }
   .col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12 {
     float: left;
@@ -2255,6 +2267,16 @@ footer {
   .col-md-offset-12 {
     margin-left: 100%;
   }
+  .logo--footer span {
+    padding-left: 12px;
+  }
+  .page-nav__item {
+    padding: 16px 1.26em;
+    font-size: 13px;
+  }
+  .content {
+    width: 630px;
+  }
   .flowchart__wrapper:nth-child(odd) .flowchart__step::before {
     left: -14.2%;
   }
@@ -2421,6 +2443,95 @@ footer {
   }
   .col-lg-offset-12 {
     margin-left: 100%;
+  }
+  .block-header span {
+    font-size: 32px;
+  }
+  .logo--footer span {
+    top: 20px;
+    height: 40px;
+    padding-left: 19px;
+    font-size: 40px; 
+    line-height: 1;
+  }
+  .logo--footer::before {
+    left: 8px;
+  }
+  .logo h1 {
+    top: 23px;
+    height: 42px;
+    font-size: 42px;
+    line-height: 1;
+  }
+  .page-nav__item {
+    padding: 16px 33px;
+    font-size: 15px;
+  }
+  .contacts__email,.contacts__request-call {
+    font-size: 13px;
+  }
+  .contacts__icq,.contacts__skype {
+    padding-left: 67px;
+  }
+  .contacts__icq::before {
+    left: 43px;
+  }
+  .contacts__skype::before {
+    left: 43px;
+  }
+  .page-header__phone {
+    padding-left: 40px; 
+    margin-bottom: 0;
+  }
+  .page-header__request-call {
+    padding-left: 40px;
+    margin-right: 30px;
+  }
+  .page-footer__email,.page-footer__request-call {
+    padding-left: 0;
+  }
+  .page-footer__icq,.page-footer__skype {
+    padding-left: 0;
+  }
+  .page-footer__icq::before {
+    left: -27px;
+  }
+  .page-footer__skype::before {
+    left: -27px;
+  }
+  .footer-nav ul {
+    padding: 10px 49px 10px 27px;
+  }
+  .service {
+    padding: 39px 32px 30px 37px;
+  }
+  .service__link {
+    width: 50px;
+    margin-right: 40px;
+  }
+  .service::before {
+    display: block;
+  }
+  .material {
+    width: 360px;
+    margin-right: 41px;
+  }
+  .tabs__wrapper {
+    padding: 63px 84px 63px 53px;
+  }
+  .tabs__item {
+    left: 137px;
+    width: -webkit-calc(100% - 137px);
+    width:         calc(100% - 137px);
+  }
+  .content {
+    width: 805px;
+  }
+  .contacts-page__meaningful {
+    font-size: 22px;
+  }
+  .products__item:nth-child(3n-2) {
+    margin-left: 0;
   }
   .flowchart {
     padding: 69px 152px 93px 152px;
