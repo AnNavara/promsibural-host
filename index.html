@@ -26,18 +26,18 @@
           <span class="visually-hidden">Телефонный номер</span>
           +7 (495) 987-65-43
         </a>
-        <button type="button" role="button" class="contacts__request-call page-header__request-call">Заказать звонок</button>
-        <a href="mailto:nfo@psu.ru" class="contacts__email">
+        <button data-modal='ask-call' type="button" role="button" class="contacts__request-call page-header__request-call">Заказать звонок</button>
+        <a href="mailto:nfo@psu.ru" class="contacts__email page-header__email">
           <span class="visually-hidden">Электронная почта</span>
           info@psu.ru
         </a>
       </div>
       <div class="col-xs-2">
-        <a href="http://www.icq.com/whitepages/cmd.php?uin=454082452&action=message" class="contacts__icq">
+        <span class="contacts__icq">
           <span class="visually-hidden">icq</span>
           454-082-452
-        </a>
-        <a href="skype:promsibural" class="contacts__skype">
+        </span>
+        <a href="skype:promsibural" class="contacts__skype page-header__skype">
           <span class="visually-hidden">skype</span>
           promsibural
         </a>
@@ -171,17 +171,17 @@
         <div class="tabs__wrapper" role="tabpanel">
           <nav role="tablist" class="tabs__menu">
             <ul>
-              <li><button type="button">Китай</button></li>
-              <li><button type="button">Белоруссия</button></li>
-              <li><button type="button">Азербайджан</button></li>
-              <li><button type="button">Казахстан</button></li>
-              <li><button type="button">Киргизия</button></li>
-              <li><button type="button">Туркменистан</button></li>
-              <li><button type="button">Другие</button></li>
+              <li role="tab"><button class="tabs__button" id="tab-chn" role="button" type="button">Китай</button></li>
+              <li role="tab"><button class="tabs__button" id="tab-bel" role="button" type="button">Белоруссия</button></li>
+              <li role="tab"><button class="tabs__button" id="tab-aze" role="button" type="button">Азербайджан</button></li>
+              <li role="tab"><button class="tabs__button" id="tab-kaz" role="button" type="button">Казахстан</button></li>
+              <li role="tab"><button class="tabs__button" id="tab-kir" role="button" type="button">Киргизия</button></li>
+              <li role="tab"><button class="tabs__button" id="tab-tur" role="button" type="button">Туркменистан</button></li>
+              <li role="tab"><button class="tabs__button tabs__button--active" id="tab-other" role="button" type="button">Другие</button></li>
             </ul>
           </nav>
           <div class="tabs__inner">
-            <section class="tabs__item tabs__item--active" role="tab">
+            <section data-id="tab-chn" class="tabs__item tabs__item--chn" role="tabpanel">
               <img src="img/slider-china.png" alt="Китай">
               <div class="tabs__descr">
                 <span class="tabs__title">Китай</span>
@@ -194,65 +194,83 @@
                 </ul>
               </div>
             </section>
-            <section class="tabs__item" role="tab">
-              <span class="tab__heading">Белоруссия</span>
-              <span class="tab__subheading">Экспорт в</span>
-              <span class="tab__subheading">Импорт из</span>
-              <ul class="tab__descr">
-                <li>Доставка</li>
-                <li>Услуги контрактодержателя</li>
-                <li>Расчет стоимости отправки груза</li>
-              </ul>
+            <section data-id="tab-bel" class="tabs__item tabs__item--bel" role="tabpanel">
+              <img src="img/slider-belorussia.png" alt="Белоруссия">
+              <div class="tabs__descr">
+                <span class="tabs__title">Белоруссия</span>
+                <span class="tabs__subheading">Экспорт в</span>
+                <span class="tabs__subheading">Импорт из</span>
+                <ul class="tabs__list">
+                  <li>Доставка</li>
+                  <li>Услуги контрактодержателя</li>
+                  <li>Расчет стоимости отправки груза</li>
+                </ul>
+              </div>
             </section>
-            <section class="tabs__item" role="tab">
-              <span class="tab__heading">Азербайджан</span>
-              <span class="tab__subheading">Экспорт в</span>
-              <span class="tab__subheading">Импорт из</span>
-              <ul class="tab__descr">
-                <li>Доставка</li>
-                <li>Услуги контрактодержателя</li>
-                <li>Расчет стоимости отправки груза</li>
-              </ul>
+            <section data-id="tab-aze" class="tabs__item tabs__item--aze" role="tabpanel">
+              <img src="img/slider-aze.png" alt="Азербайджан">
+              <div class="tabs__descr">
+                <span class="tabs__title">Азербайджан</span>
+                <span class="tabs__subheading">Экспорт в</span>
+                <span class="tabs__subheading">Импорт из</span>
+                <ul class="tabs__list">
+                  <li>Доставка</li>
+                  <li>Услуги контрактодержателя</li>
+                  <li>Расчет стоимости отправки груза</li>
+                </ul>
+              </div>
             </section>
-            <section class="tabs__item" role="tab">
-              <span class="tab__heading">Казахстан</span>
-              <span class="tab__subheading">Экспорт в</span>
-              <span class="tab__subheading">Импорт из</span>
-              <ul class="tab__descr">
-                <li>Доставка</li>
-                <li>Услуги контрактодержателя</li>
-                <li>Расчет стоимости отправки груза</li>
-              </ul>
+            <section data-id="tab-kaz" class="tabs__item tabs__item--kaz" role="tabpanel">
+              <img src="img/slider-kaz.png" alt="Казахстан">
+              <div class="tabs__descr">
+                <span class="tabs__title">Казахстан</span>
+                <span class="tabs__subheading">Экспорт в</span>
+                <span class="tabs__subheading">Импорт из</span>
+                <ul class="tabs__list">
+                  <li>Доставка</li>
+                  <li>Услуги контрактодержателя</li>
+                  <li>Расчет стоимости отправки груза</li>
+                </ul>
+              </div>
             </section>
-            <section class="tabs__item" role="tab">
-              <span class="tab__heading">Киргизия</span>
-              <span class="tab__subheading">Экспорт в</span>
-              <span class="tab__subheading">Импорт из</span>
-              <ul class="tab__descr">
-                <li>Доставка</li>
-                <li>Услуги контрактодержателя</li>
-                <li>Расчет стоимости отправки груза</li>
-              </ul>
+            <section data-id="tab-kir" class="tabs__item tabs__item--kir" role="tabpanel">
+              <img src="img/slider-kir.png" alt="Киргизия">
+              <div class="tabs__descr">
+                <span class="tabs__title">Киргизия</span>
+                <span class="tabs__subheading">Экспорт в</span>
+                <span class="tabs__subheading">Импорт из</span>
+                <ul class="tabs__list">
+                  <li>Доставка</li>
+                  <li>Услуги контрактодержателя</li>
+                  <li>Расчет стоимости отправки груза</li>
+                </ul>
+              </div>
             </section>
-            <section class="tabs__item" role="tab">
-              <span class="tab__heading">Туркменистан</span>
-              <span class="tab__subheading">Экспорт в</span>
-              <span class="tab__subheading">Импорт из</span>
-              <ul class="tab__descr">
-                <li>Доставка</li>
-                <li>Услуги контрактодержателя</li>
-                <li>Расчет стоимости отправки груза</li>
-              </ul>
+            <section data-id="tab-tur" class="tabs__item tabs__item--tur" role="tabpanel">
+              <img src="img/slider-tur.png" alt="Туркменистан">
+              <div class="tabs__descr">
+                <span class="tabs__title">Туркменистан</span>
+                <span class="tabs__subheading">Экспорт в</span>
+                <span class="tabs__subheading">Импорт из</span>
+                <ul class="tabs__list">
+                  <li>Доставка</li>
+                  <li>Услуги контрактодержателя</li>
+                  <li>Расчет стоимости отправки груза</li>
+                </ul>
+              </div>
             </section>
-            <section class="tabs__item" role="tab">
-              <span class="tab__heading">Другие</span>
-              <span class="tab__subheading">Экспорт</span>
-              <span class="tab__subheading">Импорт</span>
-              <ul class="tab__descr">
-                <li>Доставка</li>
-                <li>Услуги контрактодержателя</li>
-                <li>Расчет стоимости отправки груза</li>
-              </ul>
+            <section data-id="tab-other" class="tabs__item tabs__item--all tabs__item--active" role="tabpanel">
+              <img src="img/slider-other.png" alt="Другие">
+              <div class="tabs__descr">
+                <span class="tabs__title">Другие Страны</span>
+                <span class="tabs__subheading">Экспорт</span>
+                <span class="tabs__subheading">Импорт</span>
+                <ul class="tabs__list">
+                  <li>Доставка</li>
+                  <li>Услуги контрактодержателя</li>
+                  <li>Расчет стоимости отправки груза</li>
+                </ul>
+              </div>
             </section>
           </div>
         </div>
@@ -346,5 +364,62 @@
     </div>
   </div>
 </footer>
+  <div class="modals">
+  <div class="modal _js-modal_ask-call">
+    <button class="modal__close" type="button" name="button" role="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <div class="modal--ask-call">
+      <h3 class="modal__title">Заказать звонок</h3>
+      <form class="form_" action="" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="text" name="phone" placeholder="Номер телефона" required>
+        <input class="btn" type="submit" name="submit" value="Заказать звонок">
+      </form>
+    </div>
+    <div class="modal--thank">
+      <h3 class="modal__title">Спасибо!</h3>
+      <span>Мы свяжемся с вами<br> в ближайшее время!</span>
+      <button class="modal__close-btn btn" type="button" name="button">Закрыть</button>
+    </div>
+  </div>
+  <div class="modal modal--big">
+    <button class="modal__close" type="button" name="button" role="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <div class="estim-deal">
+      <h3 class="modal__title">Рассчитать сделку</h3>
+      <form class="estim-deal__form" action="index.html" method="post">
+        <div>
+          <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Ф.И.О." required>
+          <input class="estim-deal__input" type="text" name="name" value="" placeholder="Название организации" required>
+          <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Номер телефона" required>
+          <input class="estim-deal__input" type="email" name="name" value="" placeholder="Email" required>
+        </div>
+        <div class="estim-deal__wrapper">
+          <input class="estim-deal__input--big" type="text" name="name" value="" placeholder="Наименование товара" required>
+          <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Кол-во товара" required>
+          <input class="estim-deal__input" type="text" name="name" value="" placeholder="Цена за 1 ед. товара с НДС" required>
+        </div>
+        <div class="estim-deal__wrapper">
+          <span class="estim-deal__text">Доставка товара до города назначения: </span>
+          <input type="radio" name="delivery" id="delivery-yes" checked>
+          <label for="delivery-yes">Да</label>
+          <input type="radio" name="delivery" id="delivery-no">
+          <label for="delivery-no">Нет</label>
+        </div>
+        <span class="estim-deal__text">Прикрепить файл:</span>
+        <label class="estim-deal__file">
+          Загрузить
+          <input type="file" name="" id="" value="Загрузить">
+        </label>
+        <div class="estim-deal__btn">
+          <input class="btn btn--big" type="submit" name="name" value="Отправить">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
