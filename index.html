@@ -26,7 +26,7 @@
           <span class="visually-hidden">Телефонный номер</span>
           +7 (495) 987-65-43
         </a>
-        <button data-modal='ask-call' type="button" role="button" class="contacts__request-call page-header__request-call">Заказать звонок</button>
+        <button type="button" role="button" class="contacts__request-call page-header__request-call _js-ask-call">Заказать звонок</button>
         <a href="mailto:nfo@psu.ru" class="contacts__email page-header__email">
           <span class="visually-hidden">Электронная почта</span>
           info@psu.ru
@@ -43,7 +43,7 @@
         </a>
       </div>
       <div class="col-xs-2">
-        <button class="page-header__call-head" type="button" role="button">
+        <button class="page-header__call-head _js-estim-deal" type="button" role="button">
           Прямая связь с директором
         </button>
       </div>
@@ -56,7 +56,7 @@
           <li><a class="page-nav__item" href="#">Товарные направления</a></li>
           <li><a class="page-nav__item" href="#">Полезные материалы</a></li>
           <li><a class="page-nav__item" href="#">Контакты</a></li>
-          <li><a class="page-nav__item" href="#">Написать нам</a></li>
+          <li><button class="page-nav__item _js-estim-deal">Написать нам</button></li>
         </ul>
       </nav>
     </div>
@@ -67,7 +67,7 @@
     <div class="row">
       <div class="col-xs-12" role="banner">
         <span class="banner__text">Оказание услуг во всех сферах <b>внешнеэкономической деятельности</b></span>
-        <button role="button" type="button" class="banner__btn btn">Оставить заявку</button>
+        <button role="button" type="button" class="banner__btn btn _js-estim-deal">Оставить заявку</button>
       </div>
     </div>
   </div>
@@ -140,10 +140,25 @@
           <p>ООО «ПромСибУрал» – достойный доверия партнер в сфере внешнеэкономической деятельности и комплексного снабжения предприятий. Наша компания всегда в поисках новых решений дл,я наших клиентов, что позволяет постоянно прогрессировать и оставаться лучшими на рынке. Залогом успеха для наших компаньонов выступают 3 наших главных качества:</p>
         </section>
         <section class="slider">
-          <section class="slider__item">
-            <h1>Ответственность</h1>
-            <p>Мы убеждены, что стремление исполнять свои обязанности перед своими партнерами наилучшим из возможных способов отличительная черта нашей компании. Способность действовать в рамках «системы» на благо себя и наших компаньонов, а так же надежность и честность в отношении наших клиентов – именно то, чем можем гордиться. </p>
-          </section>
+          <div class="slider__controls">
+            <input id="slider-1" type="radio" name="slider-control" checked>
+            <input id="slider-2" type="radio" name="slider-control">
+            <input id="slider-3" type="radio" name="slider-control">
+          </div>
+          <div class="slider__wrapper">
+            <section data-id="slider-1" class="slider__item slider__item--active">
+              <h1>Ответственность</h1>
+              <p>Мы убеждены, что стремление исполнять свои обязанности перед своими партнерами наилучшим из возможных способов отличительная черта нашей компании. Способность действовать в рамках «системы» на благо себя и наших компаньонов, а так же надежность и честность в отношении наших клиентов – именно то, чем можем гордиться. </p>
+            </section>
+            <section data-id="slider-2" class="slider__item">
+              <h1>Профессионализм</h1>
+              <p>За 10 лет активности в сфере внешнеэкономической деятельности и комплексного снабжения мы собрали у себя в компании исключительных специалистов, любящих и понимающих свое дело. Мы уверены в том, что «кадры решают всё» и руководство ООО «ПромСибУрал» тщательно следит за соблюдением этой идеологии.</p>
+            </section>
+            <section data-id="slider-3" class="slider__item">
+              <h1>Внимательность</h1>
+              <p>Очевидно, что иметь большое количество позитивных  качеств, но при этом оставаться невнимательным – если и не перечеркивает, то в значительной степени сдерживает их положительный эффект. Мы не довольствуемся поверхностным взглядом на вещи и обращаем особое внимание на их своеобразие и достоинства.</p>
+            </section>
+          </div>
         </section>
       </div>
       <aside class="callback col-xs-4 col-xs-offset-1">
@@ -364,61 +379,57 @@
     </div>
   </div>
 </footer>
-  <div class="modals">
-  <div class="modal _js-modal_ask-call">
-    <button class="modal__close" type="button" name="button" role="button">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-    <div class="modal--ask-call">
-      <h3 class="modal__title">Заказать звонок</h3>
-      <form class="form_" action="" method="post">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="text" name="phone" placeholder="Номер телефона" required>
-        <input class="btn" type="submit" name="submit" value="Заказать звонок">
-      </form>
+  <div  class="modal--overlay modal--closed">
+</div>
+<div  class="modal modal--ask-call modal--closed">
+  <button class="modal__close" type="button" name="button" role="button">
+    <span class="visually-hidden">Закрыть</span>
+  </button>
+  <h3 class="modal__title">Заказать звонок</h3>
+  <form class="form_" action="" method="post">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="text" name="phone" placeholder="Номер телефона" required>
+    <input class="btn" type="submit" name="submit" value="Заказать звонок">
+  </form>
+</div>
+<div  class="modal modal--thank modal--closed">
+  <h3 class="modal__title">Спасибо!</h3>
+  <span>Мы свяжемся с вами<br> в ближайшее время!</span>
+  <button class="modal__close-btn btn" type="button" name="button">Закрыть</button>
+</div>
+<div  class="modal estim-deal modal--closed">
+  <button class="modal__close" type="button" name="button" role="button">
+    <span class="visually-hidden">Закрыть</span>
+  </button>
+  <h3 class="modal__title">Рассчитать сделку</h3>
+  <form class="estim-deal__form" action="index.html" method="post">
+    <div>
+      <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Ф.И.О." required>
+      <input class="estim-deal__input" type="text" name="organisation" value="" placeholder="Название организации" required>
+      <input class="estim-deal__input estim-deal__input--mar" type="text" name="phone_number" value="" placeholder="Номер телефона" required>
+      <input class="estim-deal__input" type="email" name="email" value="" placeholder="Email" required>
     </div>
-    <div class="modal--thank">
-      <h3 class="modal__title">Спасибо!</h3>
-      <span>Мы свяжемся с вами<br> в ближайшее время!</span>
-      <button class="modal__close-btn btn" type="button" name="button">Закрыть</button>
+    <div class="estim-deal__wrapper">
+      <input class="estim-deal__input--big" type="text" name="name" value="" placeholder="Наименование товара" required>
+      <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Кол-во товара" required>
+      <input class="estim-deal__input" type="text" name="name" value="" placeholder="Цена за 1 ед. товара с НДС" required>
     </div>
-  </div>
-  <div class="modal modal--big">
-    <button class="modal__close" type="button" name="button" role="button">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-    <div class="estim-deal">
-      <h3 class="modal__title">Рассчитать сделку</h3>
-      <form class="estim-deal__form" action="index.html" method="post">
-        <div>
-          <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Ф.И.О." required>
-          <input class="estim-deal__input" type="text" name="name" value="" placeholder="Название организации" required>
-          <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Номер телефона" required>
-          <input class="estim-deal__input" type="email" name="name" value="" placeholder="Email" required>
-        </div>
-        <div class="estim-deal__wrapper">
-          <input class="estim-deal__input--big" type="text" name="name" value="" placeholder="Наименование товара" required>
-          <input class="estim-deal__input estim-deal__input--mar" type="text" name="name" value="" placeholder="Кол-во товара" required>
-          <input class="estim-deal__input" type="text" name="name" value="" placeholder="Цена за 1 ед. товара с НДС" required>
-        </div>
-        <div class="estim-deal__wrapper">
-          <span class="estim-deal__text">Доставка товара до города назначения: </span>
-          <input type="radio" name="delivery" id="delivery-yes" checked>
-          <label for="delivery-yes">Да</label>
-          <input type="radio" name="delivery" id="delivery-no">
-          <label for="delivery-no">Нет</label>
-        </div>
-        <span class="estim-deal__text">Прикрепить файл:</span>
-        <label class="estim-deal__file">
-          Загрузить
-          <input type="file" name="" id="" value="Загрузить">
-        </label>
-        <div class="estim-deal__btn">
-          <input class="btn btn--big" type="submit" name="name" value="Отправить">
-        </div>
-      </form>
+    <div class="estim-deal__wrapper">
+      <span class="estim-deal__text">Доставка товара до города назначения: </span>
+      <input type="radio" name="delivery" id="delivery-yes" checked>
+      <label for="delivery-yes">Да</label>
+      <input type="radio" name="delivery" id="delivery-no">
+      <label for="delivery-no">Нет</label>
     </div>
-  </div>
+    <span class="estim-deal__text">Прикрепить файл:</span>
+    <label class="estim-deal__file">
+      Загрузить
+      <input type="file" name="" id="" value="Загрузить">
+    </label>
+    <div class="estim-deal__btn">
+      <input class="btn btn--big" type="submit" name="name" value="Отправить">
+    </div>
+  </form>
 </div>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
