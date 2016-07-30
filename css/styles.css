@@ -1498,7 +1498,8 @@ footer {
 .service--outsource > .service__link {
   width: auto;
 }
-.service h1 {
+.service h2 {
+  margin-top: 0;
   margin-bottom: 25px;
   font-size: 24px;
   font-weight: 700;
