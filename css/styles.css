@@ -775,9 +775,29 @@ form input[type="submit"] {
   font-size: 15px;
   color: #0b486b;
 }
+form input:not([value=""]):not(:focus):invalid + .form__error-message {
+  display: block;
+}
 
 label {
   cursor: pointer;
+}
+
+.form__error-holder {
+  position: relative;
+  display: block;
+  padding-bottom: 19px;
+}
+
+.form__error-message {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  display: none;
+  width: 100%;
+  font-size: 12px;
+  color: #df5d64;
+  text-align: center;
 }
 
 .slider {
@@ -785,6 +805,9 @@ label {
   height: 322px;
   overflow: hidden;
   border: 16px solid #16567a;
+}
+.slider input {
+  display: none;
 }
 .slider__controls {
   position: absolute;
@@ -794,19 +817,7 @@ label {
   width: 20px;
   height: 60px;
 }
-.slider__controls input {
-  width: 0;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.slider__controls input:checked::before {
-  background-color: #cff09e;
-}
-.slider__controls input::before {
+.slider__btn {
   position: absolute;
   content: "";
   top: 0;
@@ -817,10 +828,10 @@ label {
   border: 2px solid #cff09e;
   border-radius: 50%;
 }
-.slider__controls input:nth-of-type(2)::before {
+.slider__btn:nth-of-type(2) {
   top: 22px;
 }
-.slider__controls input:nth-of-type(3)::before {
+.slider__btn:nth-of-type(3) {
   top: 44px;
 }
 .slider__item {
@@ -830,9 +841,6 @@ label {
   -webkit-transition: opacity 0.3s ease;
           transition: opacity 0.3s ease;
 }
-.slider__item--active {
-  opacity: 1;
-}
 .slider__item h1 {
   margin-bottom: 25px;
   font-size: 24px;
@@ -841,6 +849,16 @@ label {
   color: #fff;
   text-align: left;
   letter-spacing: 0.05em;
+}
+.slider #slider-1:checked ~ .slider__controls label[for=slider-1],
+  .slider #slider-2:checked ~ .slider__controls label[for=slider-2],
+  .slider #slider-3:checked ~ .slider__controls label[for=slider-3] {
+  background-color: #cff09e;
+}
+.slider #slider-1:checked ~ .slider__wrapper section[data-id=slider-1],
+  .slider #slider-2:checked ~ .slider__wrapper section[data-id=slider-2],
+  .slider #slider-3:checked ~ .slider__wrapper section[data-id=slider-3] {
+  opacity: 1;
 }
 
 .block-header {
@@ -972,7 +990,7 @@ ul li::before {
 .page-nav li {
   display: inline-block;
   margin-bottom: 0;
-  margin-left: -0.28em;
+  margin-left: -0.32em;
   line-height: 1.2;
 }
 .page-nav li::before {
@@ -1042,16 +1060,18 @@ ul li::before {
   z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: url("../img/bg-modal.png") repeat 0 0 rgba(11, 72, 107, 0.35);
 }
-.modal--thank {
+.modal--thank, .modal--error {
+  padding: 0 59px 61px;
   text-align: center;
   background-color: #20658d;
 }
-.modal--thank h3 {
+.modal--thank h3, .modal--error h3 {
   padding-bottom: 17px;
+  margin-top: 32px;
 }
-.modal--thank span {
+.modal--thank span, .modal--error span {
   display: block;
   margin-bottom: 41px;
   font-size: 17px;
@@ -1073,6 +1093,10 @@ ul li::before {
   letter-spacing: 0.05em;
   background-color: #20658d;
 }
+.modal__btn {
+  display: block;
+  width: 100%;
+}
 .modal__close {
   position: absolute;
   top: 0;
@@ -1081,10 +1105,6 @@ ul li::before {
   height: 34px;
   background-color: #fff;
   border: none;
-}
-.modal__close-btn {
-  display: block;
-  width: 100%;
 }
 .modal__close::before, .modal__close::after {
   position: absolute;
@@ -1109,6 +1129,13 @@ ul li::before {
 }
 .modal__close:hover::before, .modal__close:hover::after, .modal__close:focus::before, .modal__close:focus::after {
   background-color: #073854;
+}
+.modal__form {
+  width: 100%;
+}
+.modal__form input[type=text],
+    .modal__form input[type=email] {
+  width: 100%;
 }
 
 .estim-deal {
@@ -1585,6 +1612,18 @@ footer {
 .callback {
   font-weight: 300;
 }
+.callback--fail .callback-form {
+  display: none;
+}
+.callback--fail .callback__failed {
+  display: block;
+}
+.callback--fine .callback-form {
+  display: none;
+}
+.callback--fine .callback__succeed {
+  display: block;
+}
 .callback__descr {
   display: block;
   font-size: 14px;
@@ -1600,6 +1639,25 @@ footer {
   display: inline-block;
   color: #fff;
   letter-spacing: 0.02em;
+}
+.callback__succeed, .callback__failed {
+  display: none;
+  width: 100%;
+  padding: 38px 58px 57px 58px;
+  margin-top: 50px;
+  color: #fff;
+  background-color: #205679;
+}
+.callback__succeed h3, .callback__failed h3 {
+  margin: 0 0 0.8em 0;
+  color: #fff;
+}
+.callback__succeed span, .callback__failed span {
+  display: block;
+  margin-bottom: 40px;
+}
+.callback__succeed button, .callback__failed button {
+  width: 100%;
 }
 .callback-form {
   width: 100%;
