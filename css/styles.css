@@ -973,7 +973,7 @@ ul li::before {
   position: absolute;
   content: "";
   top: 1px;
-  left: -11px;
+  left: -6px;
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -1336,7 +1336,7 @@ footer {
   line-height: 1.4;
   color: inherit;
 }
-.page-footer__phone:hover {
+.page-footer__phone:hover, .page-footer__phone:focus {
   color: #c2c2c2;
 }
 .page-footer__request-call, .page-footer__email {
@@ -1359,7 +1359,7 @@ footer {
   line-height: 1.4;
   color: #fff;
 }
-.page-footer__icq:hover, .page-footer__skype:hover {
+.page-footer__icq:hover, .page-footer__icq:focus, .page-footer__skype:hover, .page-footer__skype:focus {
   color: #c2c2c2;
 }
 .page-footer__icq::before {
@@ -1419,8 +1419,14 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.footer-nav__item:hover, .footer-nav__item:focus {
+  color: #c2c2c2;
+}
 .footer-nav__item--accent {
   color: #cff09e;
+}
+.footer-nav__item--accent:hover, .footer-nav__item--accent:focus {
+  color: #bfee79;
 }
 
 .banner {
@@ -2083,8 +2089,8 @@ footer {
   display: inline-block;
   width: -webkit-calc(25.8% - 3px);
   width:         calc(25.8% - 3px);
-  min-height: 290px;
-  padding: 102px 33px 5px 40px;
+  min-height: 300px;
+  padding: 102px 33px 25px 40px;
   margin-right: 3px;
   margin-bottom: 51px;
   margin-left: -0.22em;
@@ -2283,7 +2289,7 @@ footer {
   margin-top: 0;
 }
 .flowchart__wrapper:first-of-type .flowchart__step::before {
-  top: 50%; 
+  top: 50%;
   height: 50%;
 }
 .flowchart__wrapper:nth-child(odd) .flowchart__step {
@@ -2297,7 +2303,7 @@ footer {
 }
 .flowchart__step {
   position: relative;
-  float: left; 
+  float: left;
   width: 44.2%;
 }
 .flowchart__step::before {
@@ -2330,7 +2336,7 @@ footer {
 .flowchart__step p {
   display: block;
   padding: 26px 60px 21px 44px;
-  margin-top: -2px;
+  margin-top: -4px;
   background-color: #cff09e;
 }
 .flowchart__end {
@@ -2353,7 +2359,7 @@ footer {
   left:         calc(50% - 32px);
   width: 64px;
   height: 64px;
-  background: url("../img/icon-checker.png") no-repeat center; 
+  background: url("../img/icon-checker.png") no-repeat center;
   border: 6px solid #3b8686;
   border-radius: 50%;
 }
@@ -2377,7 +2383,7 @@ footer {
   right: -39%;
   width: 190px;
   height: 190px;
-  background: url("../img/icon-arrow-up--big.png") no-repeat center #fff; 
+  background: url("../img/icon-arrow-up--big.png") no-repeat center #fff;
   border-radius: 50%;
 }
 @media (min-width: 32em) {
@@ -2923,7 +2929,7 @@ footer {
     line-height: 1;
   }
   .logo--footer::before {
-    left: 8px;
+    left: 10px;
   }
   .logo h1 {
     top: 23px;
