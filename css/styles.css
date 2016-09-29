@@ -772,7 +772,7 @@ form input[type="text"] + input[type="submit"] {
 form input[type="submit"] {
   padding-top: 12px;
   padding-bottom: 9px;
-  font-size: 15px;
+  font-size: 11px;
   color: #0b486b;
 }
 form input:not([value=""]):not(:focus):invalid + .form__error-message {
@@ -885,8 +885,8 @@ label {
   display: inline-block;
   min-width: 50%;
   max-width: 100%;
-  margin-left: -4px;
-  font-weight: 300; 
+  margin-left: -15px;
+  font-weight: 300;
   color: #cff09e;
   text-align: right;
   text-transform: uppercase;
@@ -990,7 +990,7 @@ ul li::before {
 .page-nav li {
   display: inline-block;
   margin-bottom: 0;
-  margin-left: -0.32em;
+  margin-left: -0.34em;
   line-height: 1.2;
 }
 .page-nav li::before {
@@ -1025,8 +1025,11 @@ ul li::before {
 .page-nav li:first-child .page-nav__item {
   border-left: none;
 }
+.page-nav li:last-child {
+  margin-left: -5px;
+}
 .page-nav li:last-child .page-nav__item {
-  padding: 16px 32px;
+  padding: 16px 2.2em;
   color: #0b486b;
   background-color: #cff09e;
 }
@@ -1432,6 +1435,7 @@ footer {
 .banner {
   height: 658px;
   padding-top: 169px;
+  margin-top: -2px;
   color: #0b486b;
   background: url("../img/bg-banner.jpg") no-repeat bottom center #fff;
 }
@@ -1458,7 +1462,6 @@ footer {
   position: relative;
   min-height: 304px;
   padding: 28px 13% 30px 13%;
-  margin-top: -53px;
   margin-bottom: 82px;
   color: #0b486b;
   background-color: #fff;
@@ -1718,7 +1721,7 @@ footer {
 }
 .tabs__menu {
   float: left;
-  width: 201px;
+  width: 170px;
   margin-top: 4px;
 }
 .tabs__menu ul {
@@ -1747,7 +1750,7 @@ footer {
           transition: background-color 0.1s ease-out;
 }
 .tabs__button:hover {
-  background-color: #ededed; 
+  background-color: #ededed;
   outline: none;
 }
 .tabs__button:focus {
@@ -1762,14 +1765,14 @@ footer {
 .tabs__inner {
   position: relative;
   height: 355px;
-  padding-left: 137px;
   overflow: hidden;
 }
 .tabs__item {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 80px;
+  width: -webkit-calc(100% - 80px);
+  width:         calc(100% - 80px);
   height: 100%;
   border: 20px solid whitesmoke;
   opacity: 0;
@@ -1779,7 +1782,8 @@ footer {
 .tabs__item img {
   position: absolute;
   top: 49px;
-  left: -105px;
+  left: -105px; 
+  display: none;
 }
 .tabs__item--active {
   opacity: 1;
@@ -1811,7 +1815,7 @@ footer {
 .tabs__descr {
   position: absolute;
   top: 40px;
-  left: 245px;
+  left: 70px;
 }
 .tabs__title {
   display: block;
@@ -1892,6 +1896,7 @@ footer {
 }
 .sidepage__title h1 {
   margin-top: 13px;
+  margin-bottom: 50px;
 }
 .sidepage__title span + h1 {
   margin-top: 0;
@@ -2084,15 +2089,20 @@ footer {
   text-align: center;
 }
 
+.outsource__inner {
+  height: 400px;
+  margin-bottom: 51px;
+}
+
 .outsource__item {
   position: relative;
   display: inline-block;
   width: -webkit-calc(25.8% - 3px);
   width:         calc(25.8% - 3px);
+  height: 100%;
   min-height: 300px;
   padding: 102px 33px 25px 40px;
   margin-right: 3px;
-  margin-bottom: 51px;
   margin-left: -0.22em;
   vertical-align: top;
   background-color: #fff;
@@ -2738,12 +2748,18 @@ footer {
   .col-md-offset-12 {
     margin-left: 100%;
   }
+  form input[type="submit"] {
+    font-size: 12px;
+  }
   .logo--footer span {
     padding-left: 12px;
   }
   .page-nav__item {
     padding: 16px 1.26em;
     font-size: 13px;
+  }
+  .page-nav li:last-child .page-nav__item {
+    padding: 16px 1.26em;
   }
   .content {
     width: 630px;
@@ -2915,11 +2931,17 @@ footer {
   .col-lg-offset-12 {
     margin-left: 100%;
   }
+  form input[type="submit"] {
+    font-size: 15px;
+  }
   .slider {
     height: 278px;
   }
   .block-header span {
     font-size: 32px;
+  }
+  .block-header > a {
+    margin-left: -4px;
   }
   .logo--footer span {
     top: 20px;
@@ -2940,6 +2962,9 @@ footer {
   .page-nav__item {
     padding: 16px 33px;
     font-size: 15px;
+  }
+  .page-nav li:last-child .page-nav__item {
+    padding: 16px 32px;
   }
   .contacts__request-call, .contacts__email {
     font-size: 13px;
@@ -2998,11 +3023,20 @@ footer {
     width: -webkit-calc(100% - 137px);
     width:         calc(100% - 137px);
   }
+  .tabs__item img {
+    display: block;
+  }
+  .tabs__descr {
+    left: 245px;
+  }
   .content {
     width: 805px;
   }
   .contacts-page__meaningful {
     font-size: 22px;
+  }
+  .outsource__inner {
+    height: auto;
   }
   .products__item:nth-child(3n-2) {
     margin-left: 0;
