@@ -1572,6 +1572,14 @@ footer {
   text-align: right;
   text-transform: uppercase;
 }
+.news__item {
+  color: #fff;
+  -webkit-transition: color 0.1s linear;
+          transition: color 0.1s linear;
+}
+.news__item:hover {
+  color: #a0b4bf;
+}
 .news p {
   margin-bottom: 10px;
   font-size: 14px;
